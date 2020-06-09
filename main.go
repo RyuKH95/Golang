@@ -2,7 +2,10 @@ package main
 
 import "fmt"
 
+func multiply(a, b int) int {
+	return a * b
+}
+
 func main() {
-	name := "nico" // var name string = "nico"
-	fmt.Println(name)
+	fmt.Println(multiply(2, 2))
 }
