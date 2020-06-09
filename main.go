@@ -1,9 +1,8 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	fmt.Println("Hello World!")
+	name := "nico" // var name string = "nico"
+	fmt.Println(name)
 }
