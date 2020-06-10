@@ -1,16 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-type person struct {
-	name    string
-	age     int
-	favFood []string
-}
+	"github.com/rkh/learngo/mydict"
+)
 
 func main() {
-	favFood := []string{"kimchi", "ramen"}
-	// nico := person{"nico", 18, favFood}
-	nico := person{name: "nico", age: 18, favFood: favFood}
-	fmt.Println(nico)
+	// dictionary := mydict.Dictionary{}
+	// dictionary["hello"] = "hello"
+	// fmt.Println(dictionary)
+	dictionary := mydict.Dictionary{"first": "First word"}
+	definition, err := dictionary.Search("first")
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(definition)
+	}
 }
